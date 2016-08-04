@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="600" height="600" id="demo"></canvas>
+</body>
+<script type="text/javascript">
+    (function(){
+        var canvas = document.getElementById('demo');
+        canvas.style.border='1px solid #000';
+        console.log(canvas);
+        var ctx = canvas.getContext('2d');
+        ctx.strokeStyle='red';
+        ctx.lineWidth=20;
+
+        ctx.moveTo(100,100);
+        ctx.lineTo(300,100);
+        ctx.stroke();
+        ctx.beginPath();//上面红下面绿  //开启新状态
+        ctx.strokeStyle='green'; //两条线都变绿色
+        ctx.moveTo(100,200);
+        ctx.lineTo(300,200);
+        ctx.stroke();
+    }());
+</script>
+</html>

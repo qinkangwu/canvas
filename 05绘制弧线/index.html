@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="600" height="600" id="demo"></canvas>
+</body>
+<script type="text/javascript">
+    (function(){
+        var canvas = document.getElementById('demo');
+        canvas.style.border='1px solid #000';
+        console.log(canvas);
+        var ctx = canvas.getContext('2d');
+        ctx.moveTo(300,300);
+        //弧度 角度转换公式  rad = 30* Math.PI /180
+        //ctx.arc(300,300,100,0*Math.PI/180,30*Math.PI/180,false);
+        ctx.arc(300,300,100,0*Math.PI/180,30*Math.PI/180,true);
+        ctx.closePath();
+        ctx.stroke();
+
+    }());
+</script>
+</html>

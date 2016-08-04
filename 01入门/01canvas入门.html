@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas width="600" height="600" id="demo"></canvas>
+</body>
+    <script>
+        var canvas=document.getElementById('demo');
+        console.log(canvas);
+        canvas.style.border='1px solid #abcdef';
+        var ctx = canvas.getContext('2d'); //得到上下文
+        ctx.moveTo(100,100); //起始点
+        ctx.lineTo(200,100);
+        ctx.lineTo(100,200);
+        //ctx.lineTo(100,100);
+        ctx.closePath();     //闭合
+        ctx.strokeStyle='pink';  //描边颜色
+        ctx.lineWidth=4;    //描边线粗
+        ctx.stroke();   //描边
+        ctx.fillStyle='#abcdef';
+        ctx.fill();
+    </script>
+</html>
